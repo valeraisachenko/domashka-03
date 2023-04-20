@@ -1,183 +1,137 @@
 /* цвет основного текста #212121 */
+/* цвет адреса #757575 */
 /* белый #FFFFFF  */
 /* акцент #2196F3 */
 /* вторичный цвет фона #F5F4FA; */
 /* цвет банера и футера #2F303A */
 
-
 :root {
-    --primary-text-color:#757575(0, 0, 0, 0.8);
+    --primary-text-color: rgba(0, 0, 0, 0.8);
     --title-text-color: #212121;
-    --accent-color:#2196F3;
-    --primary-white-color: #E5E5E5;
-    --logo-text: #000000;
-    --baner-footer: #2F303A;
-    --whitecolor: #FFFFFF;
-    --two-bg-color: #F5F4FA;
-}
-
-body {
-    background-color: var(--whitecolor);
-    color: var(--primary-text-color);
-    font-family: roboto, sans-serif;
+    --accent-color: #2196F3;
+    --primary-white-color: #ffffff;
+    --adres-color: #757575;
+    --secondary-bg-color: #f5f5f5;}
     
+/* Утиилиты */
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.logostart {
-    color: var(--accent-color);
-    font-family: Raleway, sans-serif;
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1600px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Logo */
+
+.logo {
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.2;
+    line-height: 31px;
     letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    text-decoration: none;
 }
 
-.logostart:hover {
-    color: var(--accent-color);
+.logos {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    text-decoration: none;
 }
 
-.logo-text {
-    color: var(--logo-text);
+.logo-link{
+    text-decoration: none;
+    margin-right: 90px;
 }
 
-.logo-text:hover{
+.logo:hover {
     color: var(--accent-color);
 }
 
 
 /* Site nav */
 
+.site-nav {
+    display: flex;
+}
+
+.site-nav .item+.item {
+    margin-left: 50px;
+}
+
+
 .site-nav .link {
-    color: var(--primary-text-color); 
-}
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-    color: var(--accent-color);
-}
-
-.site-nav .link.current {
-    color: var(--accent-color);
-}
-
-.site-nav .link.current:hover,
-.site-nav .link.current:focus {
-    color: var(--logo-text);
-}
-
-.link-adres {
-    color: #757575;
-}
-
-.link-adres:hover,
-.link-adres:focus {
-    color: var(--accent-color);
-}
-
-.list {
-    list-style: none;
-}
-
-/* Hero */
-
-.hero-title {
-    background-color: var(--baner-footer);
-    color: var(--whitecolor);
-}
-
-/* Section */
-
-.section-title {
-    background: var(--whitecolor);
     color: var(--title-text-color);
 
-}
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-decoration: none;
 
-.zagolovok {
-    color: var(--title-text-color);
-}
-
-.abzac {
-    color: var(--primary-text-color);
-}
-
-/* Comanda */
-.comanda {
-    background-color: var(--two-bg-color);
-}
-
-.feature-list .title {
-    color: var(--title-text-color);
-}
-
-/* Examples */
-
-.work-list .title {
-    color: var(--title-text-color);
-}
-
-/* adres */
-.adres {
-    color: var(--whitecolor);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-}
-
-.adreslist {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-
-.adreslist:hover,
-.adreslist:focus {
-    color: var(--accent-color);
-} 
-
-
-/* Button */
-.button {
-    color: var(--title-text-color);
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    }
+
+
+.site-nav .link:hover{
+   color: var(--accent-color);
+        }
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+    
+/* Auth nav */
+
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+}
+    
+.auth-nav .item+.item {
+    margin-left: 50px;
+            }
+
+.link-adres{
+    color: var(--title-text-color);
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
     letter-spacing: 0.02em;
 }
 
-.button .list{
-   color: var(--title-text-color);
-   background-color: var(--primary-white-color);
+.auth-nav .link-adres{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
-.button:hover {
-    color: var(--whitecolor);
-    background-color: var(--accent-color);
-}
-
-.titl {
-    color: #212121;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 36px;
-    letter-spacing: 0.06em;
-}
-
-.benefits {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
-    color: #757575;
+.link-adres:hover {
+    color: var(--accent-color);
 }
