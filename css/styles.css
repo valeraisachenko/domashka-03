@@ -5,6 +5,8 @@
 /* вторичный цвет фона #F5F4FA; */
 /* цвет банера и футера #2F303A */
 
+/*outline: 1px solid teal;*/
+
 :root {
     --primary-text-color: rgba(0, 0, 0, 0.8);
     --title-text-color: #212121;
@@ -14,6 +16,14 @@
     --secondary-bg-color: #f5f5f5;}
     
 /* Утиилиты */
+
+*, ::after, ::before {
+    box-sizing: border-boxf;
+}
+
+h1,h2,h3,h4,h4,h5,h6 {
+    margin: 0;
+}
 
 .list {
     padding: 0;
@@ -26,7 +36,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 1600px;
+    width: 1170px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -42,6 +52,10 @@
     letter-spacing: 0.03em;
     color: var(--title-text-color);
     text-decoration: none;
+
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .logos {
@@ -134,4 +148,103 @@
 
 .link-adres:hover {
     color: var(--accent-color);
+}
+
+/*HERO Bunner*/
+
+.hero{
+    text-align: center;
+    height: 600px;
+    background-color:var(--title-text-color);
+}
+
+.bunner {
+    margin: 0;
+}
+
+.herotitle {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    
+    color: var(--primary-white-color);
+
+    padding-top: 200px;
+    padding-bottom: 40px;
+}
+
+/* Button */
+
+.button {
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 10px 32px;
+    display: inline-block;
+    text-decoration: none;
+
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+}
+
+.button:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-white-color);
+}
+
+.button.secondary {
+    color: var(--accent-color);
+    background-color: var(--primary-white-color);
+}
+
+/*Герои*/
+
+.section-title {
+    margin-top: 94px;
+}
+
+.future-list {
+    display: flex;
+}
+
+.zagolovok {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:var(--title-text-color) ;
+}
+
+.abzac {
+    margin-top: 10px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--adres-color);
+}
+
+.future-list > .item {
+    flex-basis: calc(100% / 4);
+    margin-right: 30px;
+    margin-bottom: 94px;
+
+}
+
+.future-list>.item:last-child {
+    margin-right: 0;
 }
